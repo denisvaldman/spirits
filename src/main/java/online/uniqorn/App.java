@@ -21,7 +21,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws BackingStoreException {
-        //Preferences.userRoot().node("/spirits").removeNode();
+        Preferences.userRoot().node("/spirits").removeNode();
         UserService userService = new UserService();
         String sceneToLoad = "login";
         if(userService.checkUser()){
