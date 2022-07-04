@@ -5,40 +5,56 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="265.0" prefWidth="228.0" spacing="20.0" style="-fx-background-color: #d9d9d9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="online.uniqorn.LoginController">
-    <children>
-      <ImageView fitHeight="101.0" fitWidth="276.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../spirits-cover.png" />
-         </image></ImageView>
-      <VBox prefHeight="200.0" prefWidth="100.0">
-         <children>
-              <Label prefHeight="61.0" prefWidth="96.0" text="Prihlasovacie ID:" />
-              <TextField fx:id="userNameField" style="-fx-background-color: #ffffff;" />
-         </children>
-         <padding>
-            <Insets left="10.0" right="10.0" />
-         </padding>
+<StackPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="online.uniqorn.LoginController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="265.0" prefWidth="228.0" spacing="20.0" style="-fx-background-color: #d9d9d9;">
+          <children>
+            <ImageView fitHeight="101.0" fitWidth="276.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../spirits-cover.png" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                    <Label prefHeight="61.0" prefWidth="96.0" text="Prihlasovacie ID:" />
+                    <TextField fx:id="userNameField" style="-fx-background-color: #ffffff;" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="131.0" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="61.0" prefWidth="96.0" text="Kód:" />
+                  <TextField fx:id="passwordField" />
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </VBox>
+              <Button fx:id="secondaryButton" alignment="CENTER" onAction="#login" prefHeight="46.0" prefWidth="144.0" style="-fx-background-color: #6c3ee9; -fx-background-radius: 0; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 2);" text="Prihlásenie" textFill="WHITE">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+              <Label fx:id="errorLabel" textFill="RED">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </Label>
+          </children>
       </VBox>
-      <VBox layoutX="10.0" layoutY="131.0" prefHeight="200.0" prefWidth="100.0">
+      <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Label prefHeight="61.0" prefWidth="96.0" text="Kód:" />
-            <TextField fx:id="passwordField" />
+            <ImageView fx:id="loading" fitHeight="320.0" fitWidth="228.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../spirits-loading.png" />
+               </image>
+            </ImageView>
          </children>
-         <padding>
-            <Insets left="10.0" right="10.0" />
-         </padding>
-      </VBox>
-        <Button fx:id="secondaryButton" alignment="CENTER" onAction="#login" prefHeight="46.0" prefWidth="144.0" style="-fx-background-color: #6c3ee9; -fx-background-radius: 0; -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 2);" text="Prihlásenie" textFill="WHITE">
-         <VBox.margin>
-            <Insets />
-         </VBox.margin></Button>
-        <Label fx:id="errorLabel" textFill="RED">
-         <VBox.margin>
-            <Insets />
-         </VBox.margin>
-         <padding>
-            <Insets bottom="10.0" />
-         </padding></Label>
-    </children>
-</VBox>
+      </Pane>
+   </children>
+</StackPane>

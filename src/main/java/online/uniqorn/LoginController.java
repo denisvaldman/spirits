@@ -10,12 +10,21 @@ import online.uniqorn.services.UserService;
 import online.uniqorn.utils.ConnectionStatus;
 import org.apache.http.auth.AuthenticationException;
 
+import javax.swing.text.html.ImageView;
+
 public class LoginController {
 
     @FXML
     Label errorLabel;
     @FXML
     TextField userNameField,passwordField;
+
+    @FXML
+    ImageView loading;
+
+    public LoginController() {
+//        loading.setVisible(boolean)
+    }
 
     @FXML
     private void login() {
