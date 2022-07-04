@@ -4,6 +4,7 @@ public class User {
     private String ID;
     private String Passcode;
     private String secret;
+    private String name;
 
     public User() {
     }
@@ -30,5 +31,13 @@ public class User {
 
     public void setSecret(String secret) {
         this.secret = secret;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

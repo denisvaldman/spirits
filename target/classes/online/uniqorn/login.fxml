@@ -47,14 +47,13 @@
             </Label>
           </children>
       </VBox>
-      <Pane prefHeight="200.0" prefWidth="200.0">
+      <HBox fx:id="loadingBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" visible="false" StackPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="loading" fitHeight="320.0" fitWidth="228.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="300.0" fitWidth="276.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                <image>
                   <Image url="@../../spirits-loading.png" />
                </image>
             </ImageView>
-         </children>
-      </Pane>
+         </children></HBox>
    </children>
 </StackPane>
